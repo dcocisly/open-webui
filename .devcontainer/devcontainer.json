@@ -26,7 +26,7 @@
 		}
 	},
 	"containerEnv": {
-		"PYTHONPATH": "/workspaces/open-webui/api"
+		"PYTHONPATH": "/workspaces/open-webui/backend"
 	},
 	"customizations": {
 		"vscode": {
