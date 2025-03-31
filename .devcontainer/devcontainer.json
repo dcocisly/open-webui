@@ -1,0 +1,53 @@
+{
+	"name": "Python 3.12 & Node.js",
+	"build": {
+		"context": "..",
+		"dockerfile": "Dockerfile"
+	},
+	"runArgs": [
+		"--name",
+		"open-webui"
+	],
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"version": "lts"
+		},
+		"ghcr.io/devcontainers-contrib/features/npm-package:1": {
+			"package": "typescript",
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"moby": true,
+			"azureDnsAutoDetection": true,
+			"installDockerBuildx": true,
+			"version": "latest",
+			"dockerDashComposeVersion": "v2"
+		}
+	},
+	"containerEnv": {
+		"PYTHONPATH": "/workspaces/open-webui/api"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.pylint",
+				"GitHub.copilot",
+				"ms-python.python",
+				// node
+				"42crunch.vscode-openapi",
+				"bradlc.vscode-tailwindcss",
+				"dbaeumer.vscode-eslint",
+				"eamodio.gitlens",
+				"esbenp.prettier-vscode",
+				"expo.vscode-expo-tools",
+				"ms-vscode.vscode-typescript-next",
+				"streetsidesoftware.code-spell-checker",
+				"tamasfe.even-better-toml",
+				"wix.vscode-import-cost",
+				"xabikos.javascriptsnippets",
+				"yoavbls.pretty-ts-errors"
+			]
+		}
+	}
+}
