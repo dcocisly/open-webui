@@ -25,9 +25,6 @@
 			"dockerDashComposeVersion": "v2"
 		}
 	},
-	"containerEnv": {
-		"PYTHONPATH": "/workspaces/open-webui/backend"
-	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
